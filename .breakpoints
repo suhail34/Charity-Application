@@ -1,0 +1,20 @@
+{
+  "files": {
+    ".breakpoints": [
+      {
+        "id": "76aacbd8-72bd-4943-8018-53267a21f884",
+        "line": 4,
+        "version": 1,
+        "index": 61
+      }
+    ],
+    "frontend/src/pages/Register.js": [
+      {
+        "id": "bc487e2a-7365-4662-a133-9ec7b076005d",
+        "line": 22,
+        "version": 1470,
+        "index": 519
+      }
+    ]
+  }
+}
