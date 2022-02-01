@@ -34,7 +34,7 @@ function Register(){
 
   const classes = useStyles();
   const [user, setUser] = useState({
-    fname:"", lname:"", email:"", phone:"", dateOfBirth:"", address:""
+    fname:"", lname:"", email:"", phone:"", dob:"", address:""
   });
 
   
@@ -46,13 +46,14 @@ function Register(){
 
   const handleSubmit = function(e){
     console.log("messages : ",user);
+    setUser({fname:"",lname:"", email:"", phone:"", dob:"", address:""});
     e.preventDefault();
   }
 
   return(
     <>
       <div className={classes.root}>
-        <form >
+        <form onSubmit={handleSubmit}>
         <div className={classes.box}>
           <div className={classes.field}>
             <div className={classes.text}>First Name: </div>
@@ -79,7 +80,7 @@ function Register(){
             <TextareaAutosize value={user.address} name="address" placeholder="Enter Your Address" style={{padding:".8rem", borderRadius:".2rem"}} id="outlined-basic" onChange={handleInputs} fullWidth={true} variant="outlined" />
           </div>
           <div className={classes.field} style={{paddingLeft:".9rem"}}>
-            <Button onClick={handleSubmit} color="error" variant="contained">Register</Button>
+            <Button type="submit" color="error" variant="contained">Register</Button>
           </div>
         </div>
         </form>
